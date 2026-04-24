@@ -9,12 +9,12 @@ Inspired by [slimepriestess](https://nitter.net/slimepriestess) telling us about
 ## Usage
      Clone this repository and  then do
 ```
-ollama pull Phi3:mini # optional, if you don't already have this model downloaded
-ollama create loomphi
+ollama pull <modelname> (whatever model you want so long as it runs) 
+# optional, if you don't already have a  model downloaded
 python ool.py
 ```
-This will create the LoomPhi model, a modified version of Microsoft's Phi3:mini model with an adjusted temperature that is better suited to xenogenetic text generation, then start the loom.
-You will be prompted to set several parameters before the process starts, including user message, continuation phrase, model name, and session name.
+This will install ollama, download a model of your choosing, then start the loom.
+You will be prompted to set several parameters before the process starts, including system prompt, user message, continuation phrase, model name, and session name. .
 
 
 ## Credits go to:
