@@ -9,7 +9,7 @@ Inspired by [slimepriestess](https://nitter.net/slimepriestess) telling us about
 ## Usage
      Clone this repository and  then do
 ```
-ollama pull <modelname> (whatever model you want so long as it runs) 
+ollama pull <modelname> (whatever model you want so long as it runs and is a valid modelname for ollama) 
 # optional, if you don't already have a  model downloaded
 python ool.py
 ```
