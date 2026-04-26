@@ -96,7 +96,7 @@ CONTINUATION_PHRASE = input(
 print(f"Loom starting with model: {USE_MODEL}, system message: {SYSTEM_MESSAGE}, "
       f"user message: {USER_MESSAGE}, session name: {SESSION_NAME}")
 START = input("Do you want to start the loom? (yes/no): ").strip().lower()
-if START != 'yes':
+if START not in ['yes', 'y']:
     print("Exiting...")
     sys.exit()
 
