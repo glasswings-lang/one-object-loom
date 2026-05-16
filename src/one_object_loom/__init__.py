@@ -1,2 +1,7 @@
-def main() -> None:
-    print("Hello from one-object-loom!")
+import ool
+
+def main():
+    ool.main()
+
+if __name__ == "__main__":
+    main(None)
