@@ -1,3 +1,9 @@
+# /// script
+# requires-python = ">=3.14"
+# dependencies = [
+#     "ollama>=0.6.2",
+# ]
+# ///
 """
 One-object loom
 
