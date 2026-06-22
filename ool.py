@@ -37,8 +37,20 @@ def is_model_error(e):
 def show_available_models():
     """Print installed Ollama models, warn cleanly if Ollama isn't reachable."""
     try:
-        models = ollama.list()
-        names = [m["model"] for m in models.get("models", [])]
+        resp = ollama.list()
+        # ollama-python (>=0.4) returns a ListResponse object whose .models is
+        # a list of Model objects (name in .model); older versions returned a
+        # plain dict ({"models": [{"model": ...}]}). Handle both.
+        raw = getattr(resp, "models", None)
+        if raw is None and isinstance(resp, dict):
+            raw = resp.get("models", [])
+        names = []
+        for m in (raw or []):
+            name = getattr(m, "model", None)
+            if name is None and isinstance(m, dict):
+                name = m.get("model")
+            if name:
+                names.append(name)
         if names:
             print("\nInstalled models:")
             for name in names:
